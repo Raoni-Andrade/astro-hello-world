@@ -1,9 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+const pageTitle = "Blog page | Raoni Andrade";
+
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={pageTitle}>
 	<main>
 		<svg
 			class="astro-a"
@@ -41,6 +43,11 @@ import Card from '../components/Card.astro';
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
+    <ul>
+      <li><a href="/posts/post-1/">Postagem 1</a></li>
+      <li><a href="/posts/post-2/">Postagem 2</a></li>
+      <li><a href="/posts/post-3/">Postagem 3</a></li>
+    </ul>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"

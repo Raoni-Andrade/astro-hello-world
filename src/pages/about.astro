@@ -1,9 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+const pageTitle = "About | Raoni Andrade";
+const identify = {
+  firstName: "Raoni",
+  country: "Brazil",
+  occupation: "Software Engineer",
+  hobbies: ["photography, ", "filmmaking, ", "circus artist, ", "world traveler." ],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Escrever Documentação"];
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={pageTitle}>
 	<main>
 		<svg
 			class="astro-a"
@@ -38,9 +47,14 @@ import Card from '../components/Card.astro';
 		<a href="/blog/">Blog</a>
 		<h1>Getting <span class="text-gradient">started</span></h1>
 		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			<strong>{pageTitle}</strong> <br />
+      Here are some facts about me:
 		</p>
+    <ul>
+      <li>My name is {identify.firstName}, I'm from {identify.country} and I'm a {identify.occupation}.</li>
+      <li>My hobbies are {identify.hobbies}</li>
+      <li>My main skills are: <ul>{skills.map((skill) => <li class="skill">{skill}</li>)}</ul></li>
+    </ul>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
@@ -123,4 +137,8 @@ import Card from '../components/Card.astro';
 		gap: 2rem;
 		padding: 0;
 	}
+  .skill {
+    color: green;
+    font-weight: bold;
+  }
 </style>

@@ -1,9 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+const pageTitle = "Hello, World! | Raoni Andrade";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title={pageTitle}>
 	<main>
 		<svg
 			class="astro-a"
@@ -37,30 +38,30 @@ import Card from '../components/Card.astro';
 		<a href="/about/">Sobre</a>
 		<a href="/blog/">Blog</a>
 		<h1>Hello, <span class="text-gradient">World!</span></h1>
-		<p class="instructions">
+		<!-- <p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
+		</p> -->
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
+				href="https://www.linkedin.com/in/raoni-andrade-dev/"
+				title="LinkedIn"
+				body="Check my LinkedIn profile."
 			/>
 			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="https://raonio.com.br/"
+				title="Personal Website"
+				body="Come check my personal website! Made with HTML, JavaScript and CSS."
 			/>
 			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+				href="https://github.com/Raoni-Andrade"
+				title="GitHub"
+				body="Explore my GitHub."
 			/>
 			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="https://raoni-andrade.github.io/"
+				title="Limitations"
+				body="Are just merely perceptions."
 			/>
 		</ul>
 	</main>
